@@ -11,7 +11,7 @@ public class GameControl : MonoBehaviour{
     public TextMeshProUGUI ScoreText;
     
     
-    public bool gameOver = false;
+    private bool gameOver = false;
     // Use this for initialization 
     void Awake()
     {
@@ -28,7 +28,7 @@ public class GameControl : MonoBehaviour{
     // Update is called once per frame
     void Update() 
     {
-        if (gameOver == true &&  Input.GetMouseButtonDown(0))
+        if (gameOver == true && Input.GetMouseButtonDown(0))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
