@@ -9,9 +9,10 @@ public class GameControl : MonoBehaviour{
     public static GameControl instance;
     public GameObject gameOverText;
     public TextMeshProUGUI ScoreText;
+    public float scrollspeed = -1.5f;
     
     
-    private bool gameOver = false;
+    public bool gameOver = false;
     // Use this for initialization 
     void Awake()
     {
