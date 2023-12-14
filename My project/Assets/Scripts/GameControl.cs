@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameControl : MonoBehaviour{
     
     public static GameControl instance;
     public GameObject gameOverText;
     public TextMeshProUGUI ScoreText;
+  
     public float scrollspeed = -1.5f;
-    
-    
     public bool gameOver = false;
+
+    private int score = 0;
+
     // Use this for initialization 
+
     void Awake()
     {
         if (instance == null) 
@@ -35,6 +39,21 @@ public class GameControl : MonoBehaviour{
         }
 
     }
+
+    public void BirdScored()
+    {
+if (gameOver)
+        {
+            return;
+        }
+        score++;
+        ScoreText.text = "Score: " + score.ToString();
+    }
+
+
+
+
+
     public void BirdDied()
     {
         gameOverText.SetActive (true);
