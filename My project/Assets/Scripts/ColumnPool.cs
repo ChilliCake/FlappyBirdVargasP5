@@ -6,13 +6,13 @@ public class ColumnPool : MonoBehaviour{
 
     public int columnPoolSize = 5;
     public GameObject columnPrefab;
-    public float spawnRRate = 4f;
+    public float spawnRate = 4f;
     public float columnMin = -1f;
     public float columnMax = 3.5f;
 
     private GameObject[] columns;
     private Vector2 objectPoolPosition = new Vector2(-15f, -25f);
-    private float timesSinceLastSpawned;
+    private float timeSinceLastSpawned;
     private float spawnXPosition = 10f;
     private int currentColumn = 0;
 
@@ -30,11 +30,11 @@ public class ColumnPool : MonoBehaviour{
     // Update is called once per frame
     void Update()
     {
-        timesSinceLastSpawned += Time.deltaTime;
+        timeSinceLastSpawned += Time.deltaTime;
 
-        if(GameControl.instance.gameOver == false && timesSinceLastSpawned >= spawnRRate)
+        if(GameControl.instance.gameOver == false && timeSinceLastSpawned >= spawnRate)
         {
-            timesSinceLastSpawned = 0;
+            timeSinceLastSpawned = 0;
             float spawnYPosition = Random.Range(columnMin, columnMax);
             columns[currentColumn].transform.position = new Vector2 (spawnXPosition, spawnYPosition);
             currentColumn++;

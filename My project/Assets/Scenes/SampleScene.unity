@@ -267,6 +267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 245981525}
   - component: {fileID: 245981524}
+  - component: {fileID: 245981526}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -305,6 +306,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &245981526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245981523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b07eb6a5aab5a34e8f4307bc4f6131a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  columnPoolSize: 5
+  columnPrefab: {fileID: 6927833954427504640, guid: 9fea6d5ba27543345875f0bce3d31a0e, type: 3}
+  spawnRate: 4
+  columnMin: -1
+  columnMax: 3.5
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
