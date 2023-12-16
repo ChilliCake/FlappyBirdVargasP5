@@ -16,7 +16,15 @@ public class GameControl : MonoBehaviour{
 
     private int score = 0;
 
+    AudioSource audioSource;
+    public AudioClip scoreSound;
+
+
     // Use this for initialization 
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void Awake()
     {
@@ -48,6 +56,7 @@ if (gameOver)
         }
         score++;
         ScoreText.text = "Score: " + score.ToString();
+        PlaySound(scoreSound);
     }
 
 
@@ -59,7 +68,10 @@ if (gameOver)
         gameOverText.SetActive (true);
         gameOver = true;
     }
-
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
+    }
 
 
 
