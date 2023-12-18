@@ -292,6 +292,7 @@ MonoBehaviour:
   ScoreText: {fileID: 207270680}
   scrollspeed: -1.5
   gameOver: 0
+  scoreSound: {fileID: 8300000, guid: 4e036e0917cc15e4a83bd97b1df5dc87, type: 3}
 --- !u!4 &245981525
 Transform:
   m_ObjectHideFlags: 0
@@ -798,6 +799,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upForce: 200
+  flapSound: {fileID: 0}
+  dieSound: {fileID: 0}
 --- !u!95 &869251930
 Animator:
   serializedVersion: 5
